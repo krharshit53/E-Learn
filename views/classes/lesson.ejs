@@ -1,17 +1,58 @@
 <%- include('../partials/header') %>
 
-<div class="container">
-    <div class="row">
-        <h1 class="text-center"><%=classname.title%></h1>
-        <h2 class="text-center"><%=lesson.lessonNumber%>. <%=lesson.lessonTitle%></h2>
-    </div>
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
+<div class="container-fluid" style="height:110vh;background-color:whitesmoke; margin-top: 0%;">
+    
 
-           <p><%=lesson.lessonBody%></p>
+    <div class="row">
+         
+        <div class="col-md-2 " style=" height:100vh" >
+           <div class="row">
+               <h1>All Lessions</h1>
+            <div class="list-group">
+                <%classname.lessons.forEach((lesson)=>{%>
+                <a href="/classes/<%=classname._id%>/lesson/<%=lesson.lessonNumber%>" class="list-group-item list-group-item-action"><strong> <%=lesson.lessonNumber %>.<%= lesson.lessonTitle%></strong></a>
+                <%})%>
+              </div>
+            </div>
+      </div>
 
+      <div class="col-md-8" style=" background-color: white; height:100vh ;margin-top:2%;margin-bottom: 2% ;margin-left:1%">
+          
+        
+            <div class="container">
+             <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                <h1 ><%=classname.title%></h1>
+                <h2 ><%=lesson.lessonNumber%>. <%=lesson.lessonTitle%></h2>
+               </div>
+               <div class="col-md-4"></div>
+              </div>
+
+                <div class="row" >
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8">
+                   <p class="text-center"><%=lesson.lessonBody%></p>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+        </div>  
+            
         </div>
-        <div class="col-md-2"></div>
-    </div>
-</div>
+        </div>
+        </div>
+
+
+<%- include('../partials/footer.ejs') %>
+
+
+
+
+
+
+
+
+
+
+
