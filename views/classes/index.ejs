@@ -1,0 +1,45 @@
+
+<%- include('../partials/header') %>
+
+
+
+<div class="container">
+  <header class="jumbotron">
+    <h1><span class="glyphicon glyphicon-tent"></span> Welcome To ELearn!</h1>
+
+</header>
+</div>
+<!--
+<div class="contianer">
+
+  <header class="jumbotron jumbotron-fluid">
+    <div>
+       <h1>Welcome to Yelpcamp</h1>
+<p>View our hand-picked campgrounds from all over the world</p>
+
+<a class="btn btn-primary btn-lg" href="/campgrounds/new">Add New Campground</a>
+</div>   
+</header>
+-->
+
+<div class="container">
+    <div class="row text-center flex-wrap" id="campground-grid">
+     <% classes.forEach(function(cl){ %>
+         <div class="col-md-3 col-sm-6">
+             <div class="thumbnail">
+                <img style=" width:  100%; height: 100%; object-fit: cover;" src="<%= cl.image %>">
+                <div class="caption">
+                    <h4><strong>Title:</strong><%=  cl.title %></h4>
+                    <h2><strong>Instructor</strong></h2>
+                </div>
+                <p>
+                  <a class="btn btn-primary">More Info</a>
+                    
+                </p>
+             </div>
+         </div>
+     <% }); %>
+   </div>
+   </div>
+
+
