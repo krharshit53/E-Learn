@@ -3,12 +3,12 @@
 ### I have created a E-Learn web App where user can register as instructor or student.
 
 ### A Instructor can do the following things.
--create a course
--create lessons
--edit lessons
+- create a course
+- create lessons
+- edit lessons
 
 ### A Student can do the following things.
--register for multipe courses
+- register for multipe courses
 
 ## Database Setup
 
@@ -29,6 +29,7 @@
 ```
 
 ## Views Setup
+```html
 - +---partials  
     - footer.ejs                                                             footer 
     - header.ejs                                                             header 
@@ -47,6 +48,7 @@
 - +---users
     - login.ejs                                                              login view 
     - signup.ejs                                                             register view 
+```
 
 ## Middlewares setup
 ```html
